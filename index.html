@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="./styles/trivia.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/trivia.js" defer></script>
+  </head>
+  <body>
+    <audio id="introMusic" src="./music/Pirates of the Caribbean.mp3"></audio>
+    <div class="overlay"></div>
+    <div class="header">
+      <h1>Quiz Game</h1>
+    </div>
+    <main class="maincontent">
+      <!-- Start Container -->
+      <div class="start-container">
+        <h2 style="display: none"></h2>
+
+        <div class="start-controls">
+          <p class="label">Select a Quiz Category:</p>
+
+          <div class="category-images">
+            <div class="category-item">
+              <img src="./images/harry.jpg" alt="Harry Potter" id="cat0" />
+              <p class="category-title">Harry Potter</p>
+            </div>
+            <div class="category-item">
+              <img src="./images/dc.jpg" alt="DC Universe" id="cat1" />
+              <p class="category-title">DC</p>
+            </div>
+            <div class="category-item">
+              <img src="./images/marvel.jpg" alt="Marvel Universe" id="cat2"/>
+              <p class="category-title">Marvel</p>
+            </div>
+            <div class="category-item">
+              <img src="./images/disney.jpg" alt="Disney Universe" id="cat3" />
+              <p class="category-title">Disney</p>
+            </div>
+            <div class="category-item">
+              <img src="./images/starwars.jpg" alt="Star Wars" id="cat4" />
+              <p class="category-title">Star Wars</p>
+            </div>
+          </div>
+
+          <div class="player-row">
+            <div>
+              <p class="label name-label">Player 1:</p>
+              <input type="text" class="player1-name player-name" placeholder="Player 1 Name" />
+            </div>
+            <div>
+              <p class="label name-label">Player 2:</p>
+              <input type="text" class="player2-name player-name" placeholder="Player 2 Name"/>
+            </div>
+          </div>
+        </div>
+
+        <p class="exit-message"></p>
+      </div>
+
+      <!-- Quiz Container -->
+      <div class="quiz-container" style="display: none">
+        <p class="welcome-message"></p>
+        <p class="turn-message"></p>
+
+        <div class="timer-container">
+          <p class="timer"></p>
+        </div>
+
+        <p class="question"></p>
+        <div class="options vertical-options"></div>
+        <div class="feedback"></div>
+      </div>
+
+      <!-- Result Container -->
+      <div class="result-container" style="display: none">
+        <h2>Quiz Results</h2>
+        <p class="score"></p>
+        <p class="title-message"></p>
+        <p class="session-stats"></p>
+
+        <div class="button">
+          <button class="play-again-btn">Change Quiz</button>
+          <button class="home-btn">Exit</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
